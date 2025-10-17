@@ -1,0 +1,15 @@
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\bin\Debug\net8.0\EnterpriseApp.Application.deps.json
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\bin\Debug\net8.0\EnterpriseApp.Application.runtimeconfig.json
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\bin\Debug\net8.0\EnterpriseApp.Application.dll
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\bin\Debug\net8.0\EnterpriseApp.Application.pdb
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\obj\Debug\net8.0\EnterpriseApp.Application.csproj.AssemblyReference.cache
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\obj\Debug\net8.0\EnterpriseApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\obj\Debug\net8.0\EnterpriseApp.Application.AssemblyInfoInputs.cache
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\obj\Debug\net8.0\EnterpriseApp.Application.AssemblyInfo.cs
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\obj\Debug\net8.0\EnterpriseApp.Application.csproj.CoreCompileInputs.cache
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\obj\Debug\net8.0\EnterpriseApp.Application.sourcelink.json
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\obj\Debug\net8.0\EnterpriseApp.Application.dll
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\obj\Debug\net8.0\refint\EnterpriseApp.Application.dll
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\obj\Debug\net8.0\EnterpriseApp.Application.pdb
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\obj\Debug\net8.0\EnterpriseApp.Application.genruntimeconfig.cache
+C:\Users\noeed\source\repos\EnterpriseApp\EnterpriseApp.Application\obj\Debug\net8.0\ref\EnterpriseApp.Application.dll

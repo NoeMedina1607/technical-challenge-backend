@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "EnterpriseApp.Api.Controllers.CompanyController",
+    "Method": "List",
+    "RelativePath": "api/Company",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EnterpriseApp.Api.Controllers.CompanyController",
+    "Method": "DgiiLookup",
+    "RelativePath": "api/Company/dgii-lookup/{rnc}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rnc",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
