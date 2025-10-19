@@ -97,6 +97,19 @@
           }
         }
       },
+      "HtmlAgilityPack/1.12.4": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/HtmlAgilityPack.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1645,6 +1658,37 @@
             "rid": "win"
           }
         }
+      },
+      "EnterpriseApp.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "FluentValidation.AspNetCore": "11.3.1",
+          "HtmlAgilityPack": "1.12.4",
+          "Microsoft.EntityFrameworkCore": "9.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.10"
+        },
+        "compile": {
+          "bin/placeholder/EnterpriseApp.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EnterpriseApp.Application.dll": {}
+        }
+      },
+      "EnterpriseApp.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "FluentValidation.AspNetCore": "11.3.1",
+          "Microsoft.EntityFrameworkCore": "9.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.10"
+        },
+        "compile": {
+          "bin/placeholder/EnterpriseApp.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EnterpriseApp.Domain.dll": {}
+        }
       }
     }
   },
@@ -1746,6 +1790,51 @@
         "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
         "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
+    "HtmlAgilityPack/1.12.4": {
+      "sha512": "ljqvBabvFwKoLniuoQKO8b5bJfJweKLs4fUNS/V5dsvpo0A8MlJqxxn9XVmP2DaskbUXty6IYaWAi1SArGIMeQ==",
+      "type": "package",
+      "path": "htmlagilitypack/1.12.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "htmlagilitypack.1.12.4.nupkg.sha512",
+        "htmlagilitypack.nuspec",
+        "lib/Net35/HtmlAgilityPack.dll",
+        "lib/Net35/HtmlAgilityPack.pdb",
+        "lib/Net35/HtmlAgilityPack.xml",
+        "lib/Net40-client/HtmlAgilityPack.dll",
+        "lib/Net40-client/HtmlAgilityPack.pdb",
+        "lib/Net40-client/HtmlAgilityPack.xml",
+        "lib/Net40/HtmlAgilityPack.XML",
+        "lib/Net40/HtmlAgilityPack.dll",
+        "lib/Net40/HtmlAgilityPack.pdb",
+        "lib/Net45/HtmlAgilityPack.XML",
+        "lib/Net45/HtmlAgilityPack.dll",
+        "lib/Net45/HtmlAgilityPack.pdb",
+        "lib/NetCore45/HtmlAgilityPack.XML",
+        "lib/NetCore45/HtmlAgilityPack.dll",
+        "lib/NetCore45/HtmlAgilityPack.pdb",
+        "lib/net7.0/HtmlAgilityPack.deps.json",
+        "lib/net7.0/HtmlAgilityPack.dll",
+        "lib/net7.0/HtmlAgilityPack.pdb",
+        "lib/net7.0/HtmlAgilityPack.xml",
+        "lib/netstandard2.0/HtmlAgilityPack.deps.json",
+        "lib/netstandard2.0/HtmlAgilityPack.dll",
+        "lib/netstandard2.0/HtmlAgilityPack.pdb",
+        "lib/netstandard2.0/HtmlAgilityPack.xml",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.XML",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.XML",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.dll",
+        "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid+MonoTouch/HtmlAgilityPack.pdb",
+        "lib/uap10.0/HtmlAgilityPack.XML",
+        "lib/uap10.0/HtmlAgilityPack.dll",
+        "lib/uap10.0/HtmlAgilityPack.pdb",
+        "lib/uap10.0/HtmlAgilityPack.pri",
+        "readme.md"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -4792,10 +4881,22 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "EnterpriseApp.Application/1.0.0": {
+      "type": "project",
+      "path": "../EnterpriseApp.Application/EnterpriseApp.Application.csproj",
+      "msbuildProject": "../EnterpriseApp.Application/EnterpriseApp.Application.csproj"
+    },
+    "EnterpriseApp.Domain/1.0.0": {
+      "type": "project",
+      "path": "../EnterpriseApp.Domain/EnterpriseApp.Domain.csproj",
+      "msbuildProject": "../EnterpriseApp.Domain/EnterpriseApp.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "EnterpriseApp.Application >= 1.0.0",
+      "EnterpriseApp.Domain >= 1.0.0",
       "FluentValidation.AspNetCore >= 11.3.1",
       "Microsoft.EntityFrameworkCore >= 9.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.10",
@@ -4834,7 +4935,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\noeed\\source\\repos\\EnterpriseApp\\EnterpriseApp.Application\\EnterpriseApp.Application.csproj": {
+              "projectPath": "C:\\Users\\noeed\\source\\repos\\EnterpriseApp\\EnterpriseApp.Application\\EnterpriseApp.Application.csproj"
+            },
+            "C:\\Users\\noeed\\source\\repos\\EnterpriseApp\\EnterpriseApp.Domain\\EnterpriseApp.Domain.csproj": {
+              "projectPath": "C:\\Users\\noeed\\source\\repos\\EnterpriseApp\\EnterpriseApp.Domain\\EnterpriseApp.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,25 +1,39 @@
+using EnterpriseApp.Application.Interfaces;
+using EnterpriseApp.Application.Options;
+using EnterpriseApp.Application.Services;
+using EnterpriseApp.Application.Validations;
+using EnterpriseApp.Domain;
+using EnterpriseApp.Infrastructure.Repositories;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<AppDbContext>(opt =>
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+
+builder.Services.Configure<DGIIOptions>(builder.Configuration.GetSection("Dgii"));
+
+builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
+builder.Services.AddScoped<ISPRepository, SPRepository>();
+builder.Services.AddScoped<IDgiiService, DGIIService>();
+
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<CreateCompanyValidator>();
+
+builder.Services.AddCors(o => o.AddDefaultPolicy(p =>
+    p.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin()));
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
+app.UseCors();
 app.MapControllers();
-
 app.Run();

@@ -1,3 +1,52 @@
-
+## Visual Studio / .NET Core / ASP.NET
+bin/
+obj/
+out/
+[Bb]uild/
+[Ll]og/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa]rtifacts/
 .vs/
+*.user
+*.suo
+*.userosscache
+*.userprefs
+*.ide
+*.pdb
+*.exe
+*.dll
+*.cache
+*.log
+*.vspscc
+*.vssscc
 
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+## Others
+*.dbmdl
+*.bak
+*.sql
+*.ldf
+*.mdf
+*.sdf
+*.db
+*.DS_Store
+Thumbs.db
+*.mp4
+*.zip
+*.rar
+*.7z
+
+## Node / Angular frontend (si está en la misma solución)
+node_modules/
+dist/
+.env
+.angular/
+coverage/
