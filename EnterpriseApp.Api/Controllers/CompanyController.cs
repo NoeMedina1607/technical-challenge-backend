@@ -44,7 +44,7 @@ namespace EnterpriseApp.Api.Controllers
             }
         }
 
-        [HttpGet("dgii-lookup/{rnc}")]
+        [HttpGet("dgii/{rnc}")]
         public async Task<IActionResult> DgiiLookup([FromRoute] string rnc, CancellationToken cancellationToken)
         {
             try

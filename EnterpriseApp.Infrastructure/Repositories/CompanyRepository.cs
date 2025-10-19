@@ -19,18 +19,20 @@ namespace EnterpriseApp.Infrastructure.Repositories
             try
             {
                 var query = _spRepository.GetStoredProcedureResulRawt<int>(
-                        "dbo.spCompany_Create",
-                        companyDto.Identification,
-                        companyDto.Name,
-                        companyDto.TradeName,
-                        companyDto.Category,
-                        companyDto.PaymentScheme,
-                        companyDto.Status,
-                        companyDto.EconomicActivity,
-                        companyDto.GovernmentBranch
-                    );
+                    "dbo.spCompany_Create",
+                    companyDto.Identification,
+                    companyDto.Name,
+                    companyDto.TradeName,
+                    companyDto.Category,
+                    companyDto.PaymentScheme,
+                    companyDto.Status,
+                    companyDto.EconomicActivity,
+                    companyDto.GovernmentBranch
+                );
 
-                return await query.SingleAsync(cancellationToken);
+                var rows = await query.ToListAsync(cancellationToken);
+
+                return rows.Single();
             }
             catch (Exception ex)
             {
@@ -57,9 +59,11 @@ namespace EnterpriseApp.Infrastructure.Repositories
         {
             try
             {
-                var query = _spRepository.GetStoredProcedureResulRawt<CompanyModel>("spCompany_GetById", id);
+                var query = await _spRepository.GetStoredProcedureResulRawt<CompanyModel>("spCompany_GetById", id)
+                    .AsNoTracking()
+                    .ToListAsync(cancellationToken);
 
-                return await query.SingleAsync(cancellationToken);
+                return query.SingleOrDefault();
             }
             catch (Exception ex)
             {
@@ -72,7 +76,8 @@ namespace EnterpriseApp.Infrastructure.Repositories
             try
             {
                 var query = _spRepository.GetStoredProcedureResulRawt<int>(
-                    "dbo.spCompany_Update ",
+                    "dbo.spCompany_Update",
+                    id,
                     companyDto.Name,
                     companyDto.TradeName,
                     companyDto.Category,
@@ -82,7 +87,9 @@ namespace EnterpriseApp.Infrastructure.Repositories
                     companyDto.GovernmentBranch
                 );
 
-                return await query.SingleAsync(cancellationToken);
+                var rows = await query.ToListAsync(cancellationToken);
+
+                return rows.Single();
             }
             catch (Exception ex)
             {
@@ -96,7 +103,8 @@ namespace EnterpriseApp.Infrastructure.Repositories
             {
                 var query = _spRepository.GetStoredProcedureResulRawt<int>("dbo.spCompany_Delete", id);
 
-                return await query.SingleAsync(cancellationToken);
+                var rows = await query.ToListAsync(cancellationToken);
+                return rows.SingleOrDefault();
             }
             catch (Exception ex)
             {
